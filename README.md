@@ -8,14 +8,16 @@ Meu objetivo aqui é ir além da sintaxe básica, desenvolvendo soluções estru
 
 ## 🚀 Projetos em Destaque
 
-### 1. Sistema de Gerenciamento de Contatos
-Uma aplicação desenvolvida para estruturação, validação e persistência de dados.
-* **Descrição:** Plataforma para cadastro e gerenciamento de contatos. O sistema inclui validação robusta de entradas de usuário (garantindo a integridade e formatação correta das informações) e utiliza persistência de dados local através de arquivos JSON.
-* **Conceitos Aplicados:** 
-  * Operações CRUD (Create, Read, Update, Delete)
-  * Manipulação de arquivos (I/O) e serialização de dados (JSON)
-  * Tratamento de exceções e prevenção de falhas
-  * Estruturação e modularização de código
+### 1. Sistema de Gerenciamento de Contatos (CLI)
+Uma aplicação de linha de comando (CLI) desenvolvida com foco em Orientação a Objetos (POO), validação rigorosa de dados e manipulação de arquivos.
+
+* **Descrição:** Este projeto é um gerenciador de contatos completo que opera via terminal. Ele garante que dados "sujos" não entrem no sistema aplicando regras de negócio diretamente na construção dos objetos. A aplicação consome a biblioteca `phonenumbers` para garantir que apenas números de telefone válidos (padrão BR) sejam aceitos e utiliza serialização em JSON para manter os dados salvos entre as sessões.
+* **Principais Funcionalidades e Conceitos Aplicados:**
+  * **Programação Orientada a Objetos (POO):** Divisão de responsabilidades entre as classes `Contato` (modelo/validação) e `GerenciadorContatos` (lógica de persistência e listagem).
+  * **Validação de Dados e Regras de Negócio:** Tratamento de strings (formatação automática para Title Case), bloqueio de números em nomes, verificação de sintaxe de e-mail e validação real de telefones via API/biblioteca externa.
+  * **Tratamento de Exceções:** Uso de `try/except` e `raise ValueError` para capturar erros de input do usuário sem "quebrar" a aplicação.
+  * **Persistência de Dados (JSON):** Salvamento e carregamento automático do arquivo `contatos.json` utilizando a biblioteca nativa `json`, incluindo tratamento para a ausência do arquivo na primeira execução (`FileNotFoundError`).
+* **Bibliotecas Utilizadas:** `json` (nativa) e `phonenumbers` (externa).
 * **Status:** Concluído ✔️
 
 *(Novos projetos serão adicionados continuamente conforme o avanço dos estudos e desenvolvimentos...)*
