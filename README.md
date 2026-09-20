@@ -11,32 +11,49 @@ Meu objetivo aqui é ir além da sintaxe básica, desenvolvendo soluções estru
 ### 1. Sistema de Gerenciamento de Contatos (CLI)
 Uma aplicação de linha de comando (CLI) desenvolvida com foco em Orientação a Objetos (POO), validação rigorosa de dados e manipulação de arquivos.
 
-* **Descrição:** Este projeto é um gerenciador de contatos completo que opera via terminal. Ele garante que dados "sujos" não entrem no sistema aplicando regras de negócio diretamente na construção dos objetos. A aplicação consome a biblioteca `phonenumbers` para garantir que apenas números de telefone válidos (padrão BR) sejam aceitos e utiliza serialização em JSON para manter os dados salvos entre as sessões.
+* **Descrição:** Gerenciador de contatos completo que opera via terminal. Garante que dados inválidos não entrem no sistema aplicando regras de negócio diretamente na construção dos objetos. Consome a biblioteca `phonenumbers` para validar números de telefone (padrão BR) e utiliza serialização em JSON para manter os dados salvos entre sessões.
 * **Principais Funcionalidades e Conceitos Aplicados:**
-  * **Programação Orientada a Objetos (POO):** Divisão de responsabilidades entre as classes `Contato` (modelo/validação) e `GerenciadorContatos` (lógica de persistência e listagem).
-  * **Validação de Dados e Regras de Negócio:** Tratamento de strings (formatação automática para Title Case), bloqueio de números em nomes, verificação de sintaxe de e-mail e validação real de telefones via API/biblioteca externa.
-  * **Tratamento de Exceções:** Uso de `try/except` e `raise ValueError` para capturar erros de input do usuário sem "quebrar" a aplicação.
-  * **Persistência de Dados (JSON):** Salvamento e carregamento automático do arquivo `contatos.json` utilizando a biblioteca nativa `json`, incluindo tratamento para a ausência do arquivo na primeira execução (`FileNotFoundError`).
-* **Bibliotecas Utilizadas:** `json` (nativa) e `phonenumbers` (externa).
+  * **POO:** Divisão de responsabilidades entre `Contato` (modelo/validação) e `GerenciadorContatos` (persistência e listagem)
+  * **Validação de Dados:** Formatação automática para Title Case, bloqueio de números em nomes, verificação de e-mail e validação de telefones via biblioteca externa
+  * **Tratamento de Exceções:** `try/except` e `raise ValueError` para capturar erros sem quebrar a aplicação
+  * **Persistência em JSON:** Salvamento e carregamento automático com tratamento de `FileNotFoundError`
+* **Bibliotecas:** `json` (nativa) e `phonenumbers` (externa)
 * **Status:** Concluído ✔️
 
-*(Novos projetos serão adicionados continuamente conforme o avanço dos estudos e desenvolvimentos...)*
+---
+
+### 2. Banco de Dados de Filmes (CLI)
+Uma aplicação de linha de comando para gerenciar uma biblioteca de filmes, utilizando banco de dados relacional SQLite.
+
+* **Descrição:** Sistema completo para cadastrar, listar, buscar e deletar filmes via terminal. Utiliza SQLite como banco de dados relacional, garantindo persistência dos dados e consultas eficientes com SQL.
+* **Principais Funcionalidades e Conceitos Aplicados:**
+  * **POO:** Divisão de responsabilidades entre `Film` (modelo) e `FilmsManager` (operações no banco)
+  * **Banco de Dados Relacional:** Criação de tabelas, inserção, consulta e remoção de dados com SQL
+  * **Múltiplas Buscas:** Por gênero, ano de lançamento e título do filme
+  * **match/case:** Uso do switch moderno do Python 3.10+ para o menu interativo
+* **Bibliotecas:** `sqlite3` (nativa)
+* **Status:** Concluído ✔️
+
+---
+
+*(Novos projetos serão adicionados continuamente conforme o avanço dos estudos...)*
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
 * **Linguagem:** Python 3.x
-* **Armazenamento:** JSON para persistência leve de dados
+* **Armazenamento:** JSON para persistência leve e SQLite para banco de dados relacional
 * **Versionamento:** Git e GitHub
 * **Práticas Adotadas:** Clean Code, modularização e lógica estruturada
 
 ---
 
-## ⚙️ Como Executar os Projetos localmente
+## ⚙️ Como Executar os Projetos Localmente
 
-Para testar os projetos deste repositório na sua máquina, siga os passos abaixo:
+1. **Clone o repositório:**
+```bash
+   git clone https://github.com/Jeziel1Oliveira2/ProjetosPython.git
+```
 
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+2.
