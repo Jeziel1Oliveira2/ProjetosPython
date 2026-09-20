@@ -55,5 +55,30 @@ Uma aplicação de linha de comando para gerenciar uma biblioteca de filmes, uti
 ```bash
    git clone https://github.com/Jeziel1Oliveira2/ProjetosPython.git
 ```
+2. **Entre na pasta do projeto:**
+```bash
+   cd ProjetosPython
+```
 
-2.
+3. **Instale as dependências:**
+```bash
+   pip install -r requirements.txt
+```
+
+4. **Execute o projeto desejado:**
+```bash
+   python nome_do_arquivo.py
+```
+
+---
+
+## 📁 Estrutura do Repositório
+
+```
+ProjetosPython/
+├── SistemaConta/
+│   └── gerenciador.py
+├── BancodeFilmes/
+│   └── filmes.py
+└── README.md
+```
