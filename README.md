@@ -6,7 +6,7 @@ Meu objetivo aqui é ir além da sintaxe básica, desenvolvendo soluções estru
 
 ---
 
-## 🚀 Projetos em Destaque
+## Projetos em Destaque
 
 ### 1. Sistema de Gerenciamento de Contatos (CLI)
 Uma aplicação de linha de comando (CLI) desenvolvida com foco em Orientação a Objetos (POO), validação rigorosa de dados e manipulação de arquivos.
@@ -36,38 +36,54 @@ Uma aplicação de linha de comando para gerenciar uma biblioteca de filmes, uti
 
 ---
 
+### 3. Buscador de CEP com API (CLI)
+Uma aplicação de linha de comando que busca endereços brasileiros via API do ViaCEP e salva o histórico de buscas em um arquivo CSV.
+
+* **Descrição:** Sistema completo que busca dados de endereço na API pública do ViaCEP a partir de um CEP, exibe o resultado no terminal e salva automaticamente cada busca em um arquivo CSV para controle de histórico.
+* **Principais Funcionalidades e Conceitos Aplicados:**
+  * **POO:** Divisão de responsabilidades entre `Address` (modelo) e `CepSearcher` (requisições à API e gerenciamento do histórico)
+  * **Consumo de API REST:** Requisições HTTP com a biblioteca `requests` e tratamento de respostas JSON
+  * **Histórico em CSV:** Histórico de buscas salvo e lido com o módulo nativo `csv`
+  * **Tratamento de Exceções:** `try/except` para tratamento de erros de arquivo e de API
+* **Bibliotecas:** `requests` (externa) e `csv` (nativa)
+* **Status:** Concluído ✔️
+
+---
+
 *(Novos projetos serão adicionados continuamente conforme o avanço dos estudos...)*
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+## Tecnologias e Ferramentas Utilizadas
 
 * **Linguagem:** Python 3.x
-* **Armazenamento:** JSON para persistência leve e SQLite para banco de dados relacional
+* **Armazenamento:** JSON para persistência leve, SQLite para banco de dados relacional e CSV para histórico
+* **APIs Externas:** ViaCEP para consulta de endereços brasileiros
 * **Versionamento:** Git e GitHub
 * **Práticas Adotadas:** Clean Code, modularização e lógica estruturada
 
 ---
 
-## ⚙️ Como Executar os Projetos Localmente
+## Como Executar os Projetos Localmente
 
 1. **Clone o repositório:**
 ```bash
-   git clone https://github.com/Jeziel1Oliveira2/ProjetosPython.git
+git clone https://github.com/Jeziel1Oliveira2/ProjetosPython.git
 ```
+
 2. **Entre na pasta do projeto:**
 ```bash
-   cd ProjetosPython
+cd ProjetosPython
 ```
 
 3. **Instale as dependências:**
 ```bash
-   pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 4. **Execute o projeto desejado:**
 ```bash
-   python nome_do_arquivo.py
+python nome_do_arquivo.py
 ```
 
 ---
@@ -80,5 +96,8 @@ ProjetosPython/
 │   └── gerenciador.py
 ├── BancodeFilmes/
 │   └── filmes.py
+├── SystemCEP/
+│   └── cep_searcher.py
+├── .gitignore
 └── README.md
 ```
